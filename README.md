@@ -604,3 +604,20 @@ echo " - Replace 'real' money type with NUMERIC in schema"
 echo " - Create a GitHub repo and push the generated project"
 echo
 exit 0
+# 1️⃣ Give script permission to run
+chmod +x create_28pellets.sh
+
+# 2️⃣ Run it to create your full project
+./create_28pellets.sh
+
+# 3️⃣ Move into your new app folder
+cd 28pellets
+
+# 4️⃣ Create your env file and fill in secrets
+cp .env.example .env
+# Edit .env — add your DATABASE_URL, Stripe, Pusher, Resend, etc.
+
+# 5️⃣ Give launch script permission and run
+chmod +x launch-final.sh
+./launch-final.sh --mode local --yes
+
