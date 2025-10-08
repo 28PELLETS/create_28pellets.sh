@@ -1,4 +1,4 @@
-create_28pellets.sh
+28PELLETS
 #!/usr/bin/env bash
 set -euo pipefail
 
